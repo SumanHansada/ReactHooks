@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
 function HookCounterThree() {
+  // set function doesn't merge object automatically! So you have to spread it first.
+  // However in Class Component, setState function merges object automatically.
   const [name, setName] = useState({ firstName: "", lastName: "" });
   return (
     <form>
