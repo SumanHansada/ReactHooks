@@ -9,10 +9,12 @@ export class ClassCounterOne extends Component {
   }
 
   componentDidMount() {
+    console.log("Inside Component Did Mount");
     document.title = `Clicked ${this.state.count} times`;
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps, prevState) {
+    console.log("Inside Component Did Update", prevProps, prevState);
     document.title = `Clicked ${this.state.count} times`;
   }
 
