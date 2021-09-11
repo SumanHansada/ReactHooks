@@ -11,9 +11,15 @@ function HookMouse() {
   };
 
   // componentDidMount() can be mimicked by passing empty array in useEffect Hook
+  // componentWillUnmount() can be mimicked by returning a function from useEffect Hook
   useEffect(() => {
     console.log("useEffect is called");
     window.addEventListener("mousemove", logMousePosition);
+
+    return () => {
+      console.log("Component unmounting code");
+      window.removeEventListener("mousemove", logMousePosition);
+    };
   }, []);
 
   return (
