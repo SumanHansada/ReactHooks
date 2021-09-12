@@ -4,7 +4,9 @@ import { LoginContext, UserContext } from "../App";
 function ComponentF() {
   return (
     <div>
+      <hr />
       Hello From Component F!
+      <div>Using Render Props pattern (Consumer)-</div>
       <UserContext.Consumer>
         {(user) => (
           <LoginContext.Consumer>
