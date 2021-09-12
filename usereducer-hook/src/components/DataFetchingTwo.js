@@ -51,3 +51,10 @@ function DataFetchingTwo() {
 }
 
 export default DataFetchingTwo;
+
+// Scenario                     useState                    vs          useReducer
+// Type of state                Number, String, Boolean                 Object or Array
+// Number of state transition   One or Two                              Too many
+// Related state transition?    No                                      Yes
+// Business Logic               No business logic                       Complex business logic
+// Logic vs Global              Local                                   Global
